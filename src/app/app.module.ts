@@ -10,6 +10,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CoursesService } from './Services/courses.service';
 import { ErrorComponent } from './error/error.component';
 import { CourseComponent } from './courses/course/course.component';
+import { FormsModule } from '@angular/forms';
 
 const appRoute: Routes= [
   {path:'',component:HomeComponent},
@@ -34,6 +35,7 @@ const appRoute: Routes= [
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot(appRoute)
   ],
   providers: [CoursesService],
