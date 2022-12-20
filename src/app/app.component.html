@@ -2,28 +2,33 @@
   <div class="nav-container">
     <ul>
       <ul>
-        <!--
+        
         <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="">Home</a></li>
         <li routerLinkActive="active"><a [routerLink]="'About'">About</a></li>
         <li routerLinkActive="active"><a [routerLink]="['Contact']">Contact</a></li>
         <li routerLinkActive="active"><a [routerLink]="'Courses'">Courses</a></li>
-        -->
+        
     
-     
+      <!--
         <li [class.active]="activeFragment==='Home'" ><a routerLink="" fragment="Home">Home</a></li>
         <li [class.active]="activeFragment==='About'"><a routerLink="" fragment="About">About</a></li>
         <li [class.active]="activeFragment==='Contact'"><a routerLink="" fragment="Contact">Contact</a></li>
         <li [class.active]="activeFragment==='Courses'"><a routerLink="" fragment="Courses">Courses</a></li>
-          
-     
+      --> 
+     <span style="float: right;">
+      <li (click)="login()"><a>Login</a></li>
+      <li (click)="logout()"><a>Logout</a></li>
+    </span>
       </ul>
     </ul>
   </div>
   <div class="component-container">
-    <app-home id="Home"></app-home>
+   <!-- <app-home id="Home"></app-home>
     <app-about id="About"></app-about>
     <app-contact id="Contact"></app-contact>
-    <app-courses id="Courses"></app-courses> 
-   <!-- <router-outlet></router-outlet> -->
+    <app-courses id="Courses"></app-courses>
+    --> 
+    <router-outlet></router-outlet>
+    <div class="spinner" *ngIf="displayLoadingIndicator"></div> 
   </div>
 </div>
